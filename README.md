@@ -9,7 +9,7 @@ When the uPOW is running, ya party to be used the authentication schemes and mos
 
 PT - L
 
-O Sistema de Criptografia Viva funciona como uma Hidra, se você tentar cortar 1 cabeça, 2 nasceram no lugar. 
+O Sistema de Criptografia Viva funciona como uma Hydra, se você cortar 1 cabeça, 2 nascerão no lugar.
 
 Integrado ao sistema de processamento distribuído, ao solicitar uma requisição a rede, será preciso executar uma uPOW, que usaram esquemas de A.I para analisar a requisição e aprovar ou não, caso a solicitação seja recusada, o sistema muda o esquema criptográfico, eliminando a possibilidade de ataques por força bruta. 
 
