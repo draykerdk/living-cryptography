@@ -1,7 +1,7 @@
-# Live-Cryptography
+# living-Cryptography
 The entire network is based on authentication and encryption, when someone tries to access an encrypted data, must perform a calculation for the distributed system in order to be authenticated and access the data, if the authentication is not successful, all the encryption of the data is changed.
 
-The Live Cryptography System functions as a Hydra, which is saved in a head, 2 were born in place.
+The living Cryptography System functions as a Hydra, which is saved in a head, 2 were born in place.
 
 Integrated to the distributed processing system, when requesting a network request, it will be necessary to execute a request, to calculate a request and to approve or not, if it is rejected, or the system changes to the cryptographic scheme, eliminating a possibility of attacks by brute force.
 
