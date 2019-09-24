@@ -1,4 +1,4 @@
-# Live Cryptography
+# Living Cryptography
 
 [English](./README.md) | [Português](./README.PT.md) |  Español
 
