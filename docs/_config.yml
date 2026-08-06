@@ -1,0 +1,20 @@
+# The Drayker documentation theme — one layout shared by every *.drayker.org site.
+# Source: https://github.com/draykerdk/drayker-theme
+remote_theme: draykerdk/drayker-theme
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-optional-front-matter
+
+title: Living Cryptography
+description: Authentication, uPOW and encryption designed to change when an authentication fails.
+
+dk_kicker: Security layer
+dk_subdomain: lc.drayker.org
+dk_repo: https://github.com/draykerdk/living-cryptography
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
