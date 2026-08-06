@@ -1,16 +1,9 @@
-# living-Cryptography
-The entire network is based on authentication and encryption, when someone tries to access an encrypted data, must perform a calculation for the distributed system in order to be authenticated and access the data, if the authentication is not successful, all the encryption of the data is changed.
+# Living Cryptography
 
-The living Cryptography System functions as a Hydra, which is saved in a head, 2 were born in place.
+Authentication, uPOW and encryption designed to change when an authentication fails. The documentation describes it as a hydra.
 
-Integrated to the distributed processing system, when requesting a network request, it will be necessary to execute a request, to calculate a request and to approve or not, if it is rejected, or the system changes to the cryptographic scheme, eliminating a possibility of attacks by brute force.
+**Documentation: [lc.drayker.org](https://lc.drayker.org)** — published by GitHub Pages from [`docs/`](./docs), which is where the material for this component lives.
 
-When the uPOW is running, ya party to be used the authentication schemes and most for a distributed network, when the network is attacked, faster and the security algorithms become stronger and the security crypto systems.
+Part of the Drayker ecosystem. Start at the [volunteers portal](https://drayker.org) for the map, or go straight to the [open functions](https://drayker.org/#org/fn) if you are looking for something to work on.
 
-PT - L
-
-O Sistema de Criptografia Viva funciona como uma Hydra, se você cortar 1 cabeça, 2 nascerão no lugar.
-
-Integrado ao sistema de processamento distribuído, ao solicitar uma requisição a rede, será preciso executar uma uPOW, que usaram esquemas de A.I para analisar a requisição e aprovar ou não, caso a solicitação seja recusada, o sistema muda o esquema criptográfico, eliminando a possibilidade de ataques por força bruta. 
-
-Quando o uPOW for executado, parte do processamento será usado nos esquemas de autenticação e a maior parte para a rede distribuída, quando a rede é atacada,fica mais rápida e os algoritmos de segurança se tornam mais fortes e começam a otimizar os esquemas criptográficos de segurança.  
+Drayker is a volunteer, non-profit organization, organized through [DFMP](https://dfmp.drayker.org), with resources governed by the [DAF](https://daf.drayker.org).
