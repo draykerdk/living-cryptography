@@ -1,0 +1,31 @@
+schema_version: 1
+component:
+  id: living-cryptography
+  name: Living Cryptography
+  layer: SECURITY
+  artifact_type: research-proposal
+  problem: Explore authentication and cryptographic mechanisms that can adapt after authentication failure.
+  scope:
+    - Public research direction for adaptive authentication, uPOW and encryption.
+    - Documentation of intended security properties and open questions.
+  non_scope:
+    - Audited cryptographic software.
+    - A production authentication service or completed threat model.
+  dependencies:
+    - dk-network
+  implementation:
+    level: none
+    scope: The repository contains a research proposal; no safe production implementation is published.
+    evidence:
+      - type: document
+        ref: docs/README.md
+  risks:
+    - Unspecified cryptography must not be treated as secure or production-ready.
+    - Metaphorical descriptions can obscure concrete threat and trust assumptions.
+  contributions:
+    availability: open
+    entrypoint: https://github.com/draykerdk/living-cryptography/issues
+  source_of_truth:
+    repository: https://github.com/draykerdk/living-cryptography
+    path: docs/README.md
+  last_reviewed: "2026-08-10"
