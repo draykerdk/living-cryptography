@@ -2,6 +2,12 @@ The whole network is based on authentication and encryption. To reach encrypted 
 
 The documentation describes the system as a hydra: cut off one head and two grow in its place.
 
+## Why this exists
+
+Drayker is a way of working where people keep creating, discovering and learning while intelligence carries the rest, and what results reaches the work that produced it. Living Cryptography is how a network that anyone may join stays trustworthy anyway.
+
+The argument in full is on the [manifesto](https://drayker.org/manifesto/); the [economy page](https://drayker.org/economy/) states plainly what contributing here earns and what it does not.
+
 ## How the proposal works
 
 Integrated with the distributed processing system, a network request requires a **uPOW** — a unit of work the requester runs so that the network can analyse the request and approve or reject it. Part of that computation goes to the authentication schemes; the larger part goes to the distributed network itself.
@@ -22,7 +28,7 @@ All proposed resolutions presented here are solutions to the requirements of Dk 
 
 ## Contributing
 
-Open an issue — a critical reading of the model is as valuable here as an extension of it. Issues small enough for one person to finish carry the `open-function` label and appear on the board at [drayker.org](https://drayker.org/#org/fn).
+Open an issue — a critical reading of the model is as valuable here as an extension of it. Issues small enough for one person to finish carry the `open-function` label and appear on the board at [drayker.org](https://drayker.org/fn/).
 
 Related: [`dk-network`](https://dknetwork.drayker.org) · [`bsdk`](https://bsdk.drayker.org) · [`dk`](https://dk.drayker.org)
 
