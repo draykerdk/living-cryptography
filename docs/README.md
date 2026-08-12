@@ -16,9 +16,11 @@ If a request is rejected, the cryptographic scheme changes. That is what removes
 
 The stated consequence is unusual and worth reading twice. **Under attack, the network receives more work, not less**. The security algorithms are meant to get stronger, optimizing the cryptographic schemes as they go.
 
-## Role in the system
+## How it fits the whole
 
 Living Cryptography is the security layer attached to [Dk Network](https://dknetwork.drayker.org): security is designed as part of the network's computation rather than as a service standing beside it.
+
+It is the trust under everything else. [Dk](https://dk.drayker.org) and the applications on it are authenticated through the same tunnel; [UID](https://uid.drayker.org) relies on it so identity and consent hold; [distributed support](https://support.drayker.org) is secured by it; [OSDK](https://osdk.drayker.org) devices join the network through it. The hydra property is what makes the whole design coherent: a network anyone may join stays trustworthy because under attack it receives more work, not less — the security gets stronger exactly when it is being tested.
 
 ## State of this documentation
 
