@@ -1,5 +1,7 @@
 # Living Cryptography
 
+> Research proposal — not audited, not for production use. No specification of uPOW, no threat model, no analysis under load yet. See [`docs/`](./docs) for the honest state.
+
 Authentication, uPOW and encryption designed to change when an authentication fails. The documentation describes it as a hydra.
 
 **Documentation: [lc.drayker.org](https://lc.drayker.org)**. Published by GitHub Pages from [`docs/`](./docs), which is where the material for this component lives.
