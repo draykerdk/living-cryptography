@@ -1,6 +1,6 @@
 # Living Cryptography
 
-> Authentication, uPOW and encryption designed to change when an authentication fails.
+> Living Cryptography investigates how authentication, computational work and changes to encryption state might cooperate in a distributed network. Its proposals need an explicit threat model and reproducible evaluation.
 
 Living Cryptography is a public component of Drayker. Drayker is the system; Dk is its intelligence; Dk Network is its network.
 

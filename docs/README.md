@@ -1,41 +1,35 @@
-The whole network is based on authentication and encryption. To reach encrypted data you must first perform a calculation for the distributed system. If the authentication is not successful, the encryption of the data changes.
+# Living Cryptography
 
-The documentation describes the system as a hydra: cut off one head and two grow in its place.
+> Research into adaptive authentication and encryption.
 
-## Why this exists
+Living Cryptography investigates how authentication, computational work and changes to encryption state might cooperate in a distributed network. Its proposals need an explicit threat model and reproducible evaluation.
 
-Drayker is a way of working where people keep creating, discovering and learning while intelligence carries the rest, and what results reaches the work that produced it. Living Cryptography is how a network that anyone may join stays trustworthy anyway.
+An open network must handle compromised credentials, hostile requests and ordinary mistakes while keeping legitimate access usable.
 
-The argument in full is on the [manifesto](https://drayker.org/manifesto/). The [economy page](https://drayker.org/economy/) states plainly what contributing here earns and what it does not.
+## The research question
 
-## How the proposal works
+The original proposal connects access to encrypted information with a unit of computational work, called **uPOW**. Part of that work would support authentication and part would contribute to the distributed system. It also explores changing encryption state after a failed authentication.
 
-Integrated with the distributed processing system, a network request requires a **uPOW**. A unit of work the requester runs so that the network can analyse the request and approve or reject it. Part of that computation goes to the authentication schemes. The larger part goes to the distributed network itself.
+The central question is whether these mechanisms can provide useful protection at an acceptable cost. A failed authentication may be an attack, a lost credential or a routine mistake. The design must distinguish the consequences of those cases and prevent an attacker from using the response itself to exhaust resources or deny access.
 
-If a request is rejected, the cryptographic scheme changes. That is what removes the value of repeating a brute-force attempt: the target you were guessing against no longer exists.
+## What an evaluation should establish
 
-The stated consequence is unusual and worth reading twice. **Under attack, the network receives more work, not less**. The security algorithms are meant to get stronger, optimizing the cryptographic schemes as they go.
+A threat model should identify protected assets, attacker capabilities, trust assumptions and the limits of recovery. A specification should then explain how uPOW is checked, when encryption state changes, how authorised users recover access and how much computation and coordination each step requires.
 
-## How it fits the whole
+An experiment should measure attack cost alongside legitimate-user latency, availability and resource consumption. It should also examine compromised keys and information already disclosed: changing future access conditions cannot retract a copy an attacker already obtained.
 
-Living Cryptography is the security layer attached to [Dk Network](https://dknetwork.drayker.org): security is designed as part of the network's computation rather than as a service standing beside it.
+The earlier hydra metaphor describes an aspiration for adaptation. Whether hostile traffic can produce useful work or improve protection is a hypothesis to test, with failure cases reported alongside successful results.
 
-It is the trust under everything else. [Dk](https://dk.drayker.org) and the applications on it are authenticated through the same tunnel; [UID](https://uid.drayker.org) relies on it so identity and consent hold; [distributed support](https://support.drayker.org) is secured by it; [OSDK](https://osdk.drayker.org) devices join the network through it. The hydra property is what makes the whole design coherent: a network anyone may join stays trustworthy because under attack it receives more work, not less — the security gets stronger exactly when it is being tested.
+## Where it fits
 
-## State of this documentation
+[Dk Network](https://dknetwork.drayker.org) needs authentication and secure communication across different operators and computing tiers. [UID](https://uid.drayker.org) needs credential and delegation mechanisms, and [OSDK](https://osdk.drayker.org) needs a way for devices to join within explicit permissions. These relationships define requirements for the research; they do not establish the security of a proposed mechanism.
 
-A design proposal, described in prose. There is no specification of the uPOW, no threat model, and no analysis of what happens to legitimate users under load. Those absences are the honest state of this layer, and each of them is a piece of work someone could take.
+## First contributions
 
-All proposed resolutions presented here are solutions to the requirements of Dk and the Drayker platform. Only those requirements are final.
+A useful starting contribution is a threat model for one access flow, followed by a small reproducible experiment comparing legitimate access, accidental failure and hostile requests. The public documentation currently describes the idea in prose; uPOW, recovery behaviour and the response to load still need specifications and analysis.
 
-## Contributing
+## Participation and sources
 
-Open an issue. A critical reading of the model is as valuable here as an extension of it. Issues small enough for one person to finish carry the `open-function` label and appear on the board at [drayker.org](https://drayker.org/fn/).
+This repository develops a proposal through public documentation and review. Read the [contribution guide](https://github.com/draykerdk/.github/blob/master/CONTRIBUTING.md) and [current governance](https://github.com/draykerdk/.github/blob/master/GOVERNANCE.md), or find a bounded contribution on the [open-functions board](https://drayker.org/fn/).
 
-Related: [`dk-network`](https://dknetwork.drayker.org) · [`bsdk`](https://bsdk.drayker.org) · [`dk`](https://dk.drayker.org)
-
-Other languages: [Português](./README.PT.md) · [Español](./README.ES.md). Both currently behind this English version.
-
----
-
-Content licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+Part of [Drayker](https://drayker.org). Content licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
