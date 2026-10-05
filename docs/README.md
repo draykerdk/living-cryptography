@@ -10,6 +10,8 @@ An open network must handle compromised credentials, hostile requests and ordina
 
 The original proposal connects access to encrypted information with a unit of computational work, called **uPOW**. Part of that work would support authentication and part would contribute to the distributed system. It also explores changing encryption state after a failed authentication.
 
+In the original design, a specialised AI authenticates each request, the scheme aims to resist quantum computation, and the network behaves like a hydra: a failed attempt reconfigures the encryption, an attack makes the network stronger, and the work spent on authentication also helps it process and move data.
+
 The central question is whether these mechanisms can provide useful protection at an acceptable cost. A failed authentication may be an attack, a lost credential or a routine mistake. The design must distinguish the consequences of those cases and prevent an attacker from using the response itself to exhaust resources or deny access.
 
 ## What an evaluation should establish
