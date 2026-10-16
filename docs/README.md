@@ -24,7 +24,7 @@ The earlier hydra metaphor describes an aspiration for adaptation. Whether hosti
 
 ## Where it fits
 
-[Dk Network](https://dknetwork.drayker.org) needs authentication and secure communication across different operators and computing tiers. It also requires data that leaves a device to circulate fragmented and encrypted, unreadable to whoever operates the machine that holds it; cryptography works as the skin of the network. [UID](https://uid.drayker.org) needs credential and delegation mechanisms, [OSDK](https://osdk.drayker.org) needs a way for devices to join within explicit permissions, and the [veto chain](https://uid.drayker.org) needs the channels between the nodes that verify and relay its entries to be authenticated end to end. These relationships define requirements for the research; they do not establish the security of a proposed mechanism.
+[Dk Network](https://dknetwork.drayker.org) needs authentication and secure communication across different operators and computing tiers. It also requires data that leaves a device to circulate fragmented and encrypted, unreadable to whoever operates the machine that holds it; cryptography works as the skin of the network. [UID](https://uid.drayker.org) needs credential and delegation mechanisms, [OSDK](https://osdk.drayker.org) needs a way for devices to join within explicit permissions, and the [veto chain](https://uid.drayker.org/#the-veto-chain) needs the channels between the nodes that verify and relay its entries to be authenticated end to end. These relationships define requirements for the research; they do not establish the security of a proposed mechanism.
 
 ## First contributions
 
