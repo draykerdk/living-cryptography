@@ -8,11 +8,15 @@ component:
   scope:
     - Public research direction for adaptive authentication, uPOW and encryption.
     - Documentation of intended security properties and open questions.
+    - "Encryption as the skin of the network: data leaving a device circulates fragmented and encrypted, unreadable to the operator of the machine that holds it."
+    - Compartmentalisation, detection of anomalous behaviour and fault tolerance under an explicit threat model.
   non_scope:
     - Audited cryptographic software.
     - A production authentication service or completed threat model.
   dependencies:
     - dk-network
+    - uid
+    - osdk
   implementation:
     level: none
     scope: The repository contains a research proposal; no safe production implementation is published.
@@ -28,4 +32,4 @@ component:
   source_of_truth:
     repository: https://github.com/draykerdk/living-cryptography
     path: docs/README.md
-  last_reviewed: "2026-08-10"
+  last_reviewed: "2026-10-19"

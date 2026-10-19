@@ -8,9 +8,9 @@ An open network must handle compromised credentials, hostile requests and ordina
 
 ## The research question
 
-The original proposal connects access to encrypted information with a unit of computational work, called **uPOW**. Part of that work would support authentication and part would contribute to the distributed system. It also explores changing encryption state after a failed authentication.
+The original proposal connects access to encrypted information with a unit of computational work, called **uPOW**. A smaller part of that work supports authentication; the larger part goes to the distributed system itself, so security is part of the network's computation rather than a service standing beside it, and under attack the network receives more work, not less. It also explores changing encryption state after a failed authentication.
 
-In the original design, a specialised AI authenticates each request, the scheme aims to resist quantum computation, and the network behaves like a hydra: a failed attempt reconfigures the encryption, an attack makes the network stronger, and the work spent on authentication also helps it process and move data.
+In the design, a specialised AI authenticates each request, the scheme aims to resist quantum computation, and the network behaves like a hydra: a failed attempt reconfigures the encryption, an attack makes the network stronger, and the work spent on authentication also helps it process and move data.
 
 The central question is whether these mechanisms can provide useful protection at an acceptable cost. A failed authentication may be an attack, a lost credential or a routine mistake. The design must distinguish the consequences of those cases and prevent an attacker from using the response itself to exhaust resources or deny access.
 
@@ -18,9 +18,11 @@ The central question is whether these mechanisms can provide useful protection a
 
 A threat model should identify protected assets, attacker capabilities, trust assumptions and the limits of recovery. The evaluation should also treat compartmentalisation, operation with isolated parts, detection of anomalous behaviour and fault tolerance as requirements, and show how each holds under that threat model. A specification should then explain how uPOW is checked, when encryption state changes, how authorised users recover access and how much computation and coordination each step requires.
 
+The threat model has to include adversaries that try to influence, infiltrate, capture, block, fragment or destroy parts of the network, and powerful actors that may treat encryption and distributed communication themselves as a threat. One target property comes from the design: an attacker holding a valid identity, even with quantum computation, should reach only what that identity's access level allows, and no Dk process should hold permanent access to everything. The evaluation also has a limit of its own: protection must not turn legitimate criticism, dissent or independent audit into suspects.
+
 An experiment should measure attack cost alongside legitimate-user latency, availability and resource consumption. It should also examine compromised keys and information already disclosed: changing future access conditions cannot retract a copy an attacker already obtained.
 
-The earlier hydra metaphor describes an aspiration for adaptation. Whether hostile traffic can produce useful work or improve protection is a hypothesis to test, with failure cases reported alongside successful results.
+The hydra names the intended behaviour: a failed attempt reconfigures the encryption, and an attack gives the network more work and stronger protection. Whether hostile traffic can produce useful work and improve protection is what the research has to establish, with failure cases reported alongside successful results.
 
 ## Where it fits
 
