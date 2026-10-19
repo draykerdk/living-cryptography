@@ -16,7 +16,7 @@ The central question is whether these mechanisms can provide useful protection a
 
 ## What an evaluation should establish
 
-A threat model should identify protected assets, attacker capabilities, trust assumptions and the limits of recovery. A specification should then explain how uPOW is checked, when encryption state changes, how authorised users recover access and how much computation and coordination each step requires.
+A threat model should identify protected assets, attacker capabilities, trust assumptions and the limits of recovery. The evaluation should also treat compartmentalisation, operation with isolated parts, detection of anomalous behaviour and fault tolerance as requirements, and show how each holds under that threat model. A specification should then explain how uPOW is checked, when encryption state changes, how authorised users recover access and how much computation and coordination each step requires.
 
 An experiment should measure attack cost alongside legitimate-user latency, availability and resource consumption. It should also examine compromised keys and information already disclosed: changing future access conditions cannot retract a copy an attacker already obtained.
 
@@ -24,7 +24,7 @@ The earlier hydra metaphor describes an aspiration for adaptation. Whether hosti
 
 ## Where it fits
 
-[Dk Network](https://dknetwork.drayker.org) needs authentication and secure communication across different operators and computing tiers. [UID](https://uid.drayker.org) needs credential and delegation mechanisms, [OSDK](https://osdk.drayker.org) needs a way for devices to join within explicit permissions, and the [veto chain](https://uid.drayker.org) needs the channels between the nodes that verify and relay its entries to be authenticated end to end. These relationships define requirements for the research; they do not establish the security of a proposed mechanism.
+[Dk Network](https://dknetwork.drayker.org) needs authentication and secure communication across different operators and computing tiers. It also requires data that leaves a device to circulate fragmented and encrypted, unreadable to whoever operates the machine that holds it; cryptography works as the skin of the network. [UID](https://uid.drayker.org) needs credential and delegation mechanisms, [OSDK](https://osdk.drayker.org) needs a way for devices to join within explicit permissions, and the [veto chain](https://uid.drayker.org/#the-veto-chain) needs the channels between the nodes that verify and relay its entries to be authenticated end to end. These relationships define requirements for the research; they do not establish the security of a proposed mechanism.
 
 ## First contributions
 
