@@ -14,6 +14,8 @@ In the design, a specialised AI authenticates each request, the scheme aims to r
 
 The central question is whether these mechanisms can provide useful protection at an acceptable cost. A failed authentication may be an attack, a lost credential or a routine mistake. The design must distinguish the consequences of those cases and prevent an attacker from using the response itself to exhaust resources or deny access.
 
+In the design, a failed or violating request leads back to the identity that made it, its [UID](https://uid.drayker.org): the holder is informed of what happened and given steps to resolve it, which is how a lost credential or a mistake is told apart from an attack. The network learns from attacks, removes compromised nodes and turns the computation an attacker spends into stronger encryption.
+
 ## What an evaluation should establish
 
 A threat model should identify protected assets, attacker capabilities, trust assumptions and the limits of recovery. The evaluation should also treat compartmentalisation, operation with isolated parts, detection of anomalous behaviour and fault tolerance as requirements, and show how each holds under that threat model. A specification should then explain how uPOW is checked, when encryption state changes, how authorised users recover access and how much computation and coordination each step requires.
@@ -26,11 +28,15 @@ The hydra names the intended behaviour: a failed attempt reconfigures the encryp
 
 ## Where it fits
 
-[Dk Network](https://dknetwork.drayker.org) needs authentication and secure communication across different operators and computing tiers. It also requires data that leaves a device to circulate fragmented and encrypted, unreadable to whoever operates the machine that holds it; cryptography works as the skin of the network. [UID](https://uid.drayker.org) needs credential and delegation mechanisms, [OSDK](https://osdk.drayker.org) needs a way for devices to join within explicit permissions, and the [veto chain](https://uid.drayker.org/#the-veto-chain) needs the channels between the nodes that verify and relay its entries to be authenticated end to end. These relationships define requirements for the research; they do not establish the security of a proposed mechanism.
+In the design, Living Cryptography is the first access layer of both networks of [Dk Network](https://dknetwork.drayker.org). A request is authenticated on the public interaction and testing network first; if it goes on to the main network, Dk authenticates it again, linked to that first approval. While a request is served, the requester's bandwidth relays other requests and its computation helps the network's work and the change of encryption state at the access layer, and each request also helps serve requests from two other nodes. Nodes store and relay what they carry while being authenticated continuously, so the whole works as a distributed secure channel. The same mechanism runs from the base of every module to every layer: a module that the network as a whole does not hold valid cannot take part.
+
+[Dk Network](https://dknetwork.drayker.org) needs authentication and secure communication across different operators and computing tiers. It also requires data that leaves a device to circulate fragmented and encrypted, unreadable to whoever operates the machine that holds it; cryptography works as the skin of the network. The design also asks for protection where there is no direct connection to the wider network: a few nearby nodes should be able to validate what they relay, so a local mesh or a remote site stays trustworthy until it reconnects. [UID](https://uid.drayker.org) needs credential and delegation mechanisms, [OSDK](https://osdk.drayker.org) needs a way for devices to join within explicit permissions, and the [veto chain](https://uid.drayker.org/#the-veto-chain) needs the channels between the nodes that verify and relay its entries to be authenticated end to end. These relationships define requirements for the research; they do not establish the security of a proposed mechanism.
 
 ## First contributions
 
 A useful starting contribution is a threat model for one access flow, followed by a small reproducible experiment comparing legitimate access, accidental failure and hostile requests. The public documentation currently describes the idea in prose; uPOW, recovery behaviour and the response to load still need specifications and analysis.
+
+The design already sketches the uPOW, and that sketch is the specification's starting point. At each connection port, functions wait to be executed. An identity runs one and receives a key that entitles it to a single request, and receiving the answer requires a further computation several times larger than the resources the answer uses. The work combines a Boolean calculation with a specialised AI that authenticates the request. Every function carries a verifiable hash and history, so a connection built from altered base modules cannot produce valid keys. A specification has to state these inputs, the cost ratio and how each step is verified.
 
 ## Participation and sources
 
