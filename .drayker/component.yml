@@ -10,6 +10,9 @@ component:
     - Documentation of intended security properties and open questions.
     - "Encryption as the skin of the network: data leaving a device circulates fragmented and encrypted, unreadable to the operator of the machine that holds it."
     - Compartmentalisation, detection of anomalous behaviour and fault tolerance under an explicit threat model.
+    - "The first access layer of the main network and of the public interaction and testing network, working as a distributed secure channel."
+    - "A first sketch of uPOW: functions waiting at connection ports, a key per request and a larger computation to receive the answer."
+    - "Validation by a few nearby nodes without a direct connection, and violations traced back to the requesting UID."
   non_scope:
     - Audited cryptographic software.
     - A production authentication service or completed threat model.
